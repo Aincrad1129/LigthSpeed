@@ -1,13 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 namespace data
 {
-    public class DatosGuardar : MonoBehaviour
+    [Serializable]
+    public class DatosGuardar 
     {
         public int dinero;
         public float distancia;
         public GameObject[] naves;
+        public GameObject ultimaNave;
     }
 }

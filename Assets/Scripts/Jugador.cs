@@ -8,12 +8,13 @@ public class Jugador : MonoBehaviour
     public int vida;
     public Joystick stick;
     Rigidbody m_Rigidbody;
-    public GameObject PanelGameOver;
+    public GameObject PanelGameOver, Panelfin;
 
     void Start()
     {
         m_Rigidbody = GetComponent<Rigidbody>();
         PanelGameOver.SetActive(false);
+        Panelfin.SetActive(false);
     }
     void Update()
     {
@@ -37,7 +38,8 @@ public class Jugador : MonoBehaviour
         {
             vel = 0;
             print("PERDIO POR LOCA");
-            PanelGameOver.SetActive(true);
+            PanelGameOver.SetActive(true); 
+            AudioManager.Instance.Musicasource.Stop();
         }
     }
 
@@ -47,8 +49,17 @@ public class Jugador : MonoBehaviour
         {
             vida -=  1;
             Destroy(collision.gameObject);
-            AudioManager.Instance.Musicasource.Stop();
+           
         }
+       
+        if (collision.collider.tag == "Fin")
+        {
+            vel = 0;
+            Panelfin.SetActive(true);
+        }
+        
     }
+
+
 }
 

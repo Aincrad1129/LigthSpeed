@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Salir : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,4 +32,7 @@ public class Salir : MonoBehaviour
         SceneManager.LoadScene(1);
         print("carga");
     }
+
+    
 }
+ 

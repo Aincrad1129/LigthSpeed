@@ -24,8 +24,9 @@ public class Salir : MonoBehaviour
     }
     public void Reiniciar()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         AudioManager.Instance.Musicasource.Play();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        
     }
     public void Inicia()
     {

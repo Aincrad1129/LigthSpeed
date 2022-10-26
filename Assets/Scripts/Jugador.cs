@@ -37,7 +37,7 @@ public class Jugador : MonoBehaviour
         {
             vel = 0;
             PanelGameOver.SetActive(true); 
-            AudioManager.Instance.Musicasource.Stop();
+            AudioManager.Instance.Musicasource.Pause();
         }
     }
 

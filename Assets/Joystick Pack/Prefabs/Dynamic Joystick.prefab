@@ -95,8 +95,8 @@ MonoBehaviour:
   axisOptions: 0
   snapX: 0
   snapY: 0
-  background: {fileID: 0}
-  handle: {fileID: 0}
+  background: {fileID: 8135886327475159579}
+  handle: {fileID: 8135886327784587633}
   moveThreshold: 1
 --- !u!1 &8135886327475159578
 GameObject:

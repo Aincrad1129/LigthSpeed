@@ -27,7 +27,6 @@ public class Jugador : MonoBehaviour
         float x;
         x = stick.Horizontal + Input.GetAxis("Horizontal");
         transform.Translate(x * vel * Time.deltaTime, 0f, 0f);
-
         m_Rigidbody.velocity = transform.forward * vel;
     }
 
@@ -37,7 +36,6 @@ public class Jugador : MonoBehaviour
         if (vida <= 0)
         {
             vel = 0;
-            print("PERDIO POR LOCA");
             PanelGameOver.SetActive(true); 
             AudioManager.Instance.Musicasource.Stop();
         }

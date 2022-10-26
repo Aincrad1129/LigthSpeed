@@ -9,7 +9,7 @@ public class Camarafollow : MonoBehaviour
     Vector3 offset;
     private void Awake()
     {
-        player = FindObjectOfType<JugadorMov>().transform;
+        player = FindObjectOfType<Jugador>().transform;
 
     }
     void Start()

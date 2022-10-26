@@ -35,5 +35,7 @@ public class Groundtile : MonoBehaviour
         int SpawnPrefab = Random.Range(0, obstaculospref.Length);
 
         Instantiate(obstaculospref[SpawnPrefab], spawnpoints[ChooseSpawnPoint].transform.position, Random.rotation);
+       // Destroy(obstaculospref[SpawnPrefab], 7f);
+    
     }
 }

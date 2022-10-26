@@ -33,8 +33,8 @@ namespace data
 
         private void DistanceCalcu(float distance)
         {   
-            distance = (checkPoint.transform.position.x - transform.position.z);
-            distanceText.text= "Distancia: " + distance.ToString("F1") + "Mts";
+            distance = (checkPoint.transform.position.z - transform.position.z);
+            distanceText.text= "Distancia: " + distance.ToString("F1") + " Mts";
             if(distance <=0)
             {
                 distanceText.text = "Meta";

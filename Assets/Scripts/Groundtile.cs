@@ -5,7 +5,7 @@ using UnityEngine;
 public class Groundtile : MonoBehaviour
 {
     private Spawpiso Spawpiso;
-    public GameObject[] obstaculos;
+    public GameObject[] obstaculospref;
     public Transform[] spawnpoints;
 
     private void Awake()
@@ -13,6 +13,10 @@ public class Groundtile : MonoBehaviour
         Spawpiso = GameObject.FindObjectOfType<Spawpiso>();
     }
 
+    private void Start()
+    {
+        SpawnObst();
+    }
     private void OnTriggerExit(Collider other)
     {
         Spawpiso.Spawnpiso();
@@ -24,5 +28,12 @@ public class Groundtile : MonoBehaviour
     void Update()
     {
         
+    }
+    public void SpawnObst()
+    {
+        int ChooseSpawnPoint = Random.Range(0, spawnpoints.Length);
+        int SpawnPrefab = Random.Range(0, obstaculospref.Length);
+
+        Instantiate(obstaculospref[SpawnPrefab], spawnpoints[ChooseSpawnPoint].transform.position, Random.rotation);
     }
 }

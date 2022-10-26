@@ -58,5 +58,5 @@ Material:
     - _Glitch_Scale: 120
     - _Glitch_Step: 0.2
     m_Colors:
-    - _Sprite_Color: {r: 0.99512196, g: 1, b: 0, a: 1}
+    - _Sprite_Color: {r: 0.92156863, g: 0, b: 1, a: 1}
   m_BuildTextureStacks: []
